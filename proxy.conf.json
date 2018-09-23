@@ -1,0 +1,8 @@
+{
+    "/api/": {
+      "target": "https://intense-ocean-93206.herokuapp.com/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }

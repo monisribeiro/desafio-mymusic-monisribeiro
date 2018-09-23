@@ -1,0 +1,39 @@
+.table {
+    margin-bottom: 0px;
+
+    thead{
+        tr{
+            th{
+                border-top: none;
+                border-bottom: none;
+                text-transform: uppercase;
+                font-size: 11px;
+                font-weight: normal;
+                padding-bottom: 0rem;
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+            &:hover{
+                td{
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+}
+
+.body-table{
+    margin-top: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.head-table{
+    margin-top: 0.5rem;
+}

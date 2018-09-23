@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import './theme/bootstrap-4.0.0/scss/bootstrap';
+@import './theme/partials/partials';
+
+html, body{
+    height: 100%;
+    margin: 0px;
+}
