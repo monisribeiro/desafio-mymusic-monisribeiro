@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/ui/edit-playlist/edit-playlist.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/ui/edit-playlist</a> edit-playlist.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>72/81</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.07% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.19% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>23/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>63/71</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../../core/user.servic<span class="branch-1 cbranch-no" title="branch not covered" >e';</span>
+impo<span class="missing-if-branch" title="if path not taken" >I</span>rt { EditPlaylistService } from './services/edit-playlist.service';<span class="cstat-no" title="statement not covered" ></span>
+import * as _ from 'lodash';<span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span></span>
+<span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ></span></span>
+@Component({
+  selector: 'app-edit-playlist',
+  ho<span class="missing-if-branch" title="else path not taken" >E</span>st: {
+    class: 'edit-playlist d-flex'
+  },
+  templateUrl: './edit-playlist.component.html',
+  styleUrls: ['./edit-playlist.component.scss']
+})
+export class EditPlaylistComponent implements OnInit {
+  criteria: any;
+  playlistId: any;
+  allMusics: any;
+  allSelected: boolean = false;
+  alert = {message: '', class: '', display: false};
+&nbsp;
+  constructor(private activatedRoute: ActivatedRoute,
+              private userService: UserService,
+              private router: Router,
+              private editPlaylistService: EditPlaylistService) {
+    }
+&nbsp;
+  public musics: any;
+&nbsp;
+  ngOnInit() {
+    this.activatedRoute.data.subscribe(event =&gt; {
+      this.playlistId = event.musics.id;
+      this.musics = event.musics.playlistMusicas;
+      this.allMusics = event.allMusics;
+    });
+&nbsp;
+    this.activatedRoute.queryParams.subscribe(event =&gt; {
+      this.criteria = event.search;
+    });
+&nbsp;
+    this.observeUser();
+  }
+&nbsp;
+  observeUser() {
+    this.userService.observeUser().subscribe(response =&gt; {
+      this.editPlaylistService.getPlaylistMusics(response).subscribe(musicsResponse =&gt; {
+        this.musics = musicsResponse.playlistMusicas;
+      });
+    });
+  }
+&nbsp;
+  selectMusic(music) {
+    music.selected = true;
+    this.isAllSelected();
+  }
+&nbsp;
+  toggleChecked() {
+    this.allSelected = !this.allSelected;
+    this.allMusics.forEach(item =&gt; item.selected = this.allSelected);
+  }
+&nbsp;
+  isAllSelected() {
+    this.allSelected = this.allMusics.filter(item =&gt; !item.selected).length === 0;
+  }
+<span class="fstat-no" title="function not covered" ></span>
+  remove(mus<span class="cstat-no" title="statement not covered" >ic) {</span>
+    this.edi<span class="cstat-no" title="statement not covered" >tPlaylistService.remove(this.playlis</span>tId, music.musica.id).subscribe(response =&gt; {
+      this.a<span class="cstat-no" title="statement not covered" >lert.message = 'Música remov</span>ida com sucesso';
+      this.alert.class = 'alert-success';
+      this.alert.display = true;
+      _.remove(this.musics, item =&gt; item.musica.i<span class="fstat-no" title="function not covered" >d </span>=== music.musica.id);
+    }, e<span class="cstat-no" title="statement not covered" >rror =&gt; {</span>
+      this.alert.message = 'Não foi possível remover a música.';
+      this.alert.class = 'alert-danger';
+      this.alert.display = true;
+    });
+  }
+&nbsp;
+  closeAlert() {
+    this.alert.display = false;
+  }
+&nbsp;
+  addMusic(<span class="fstat-no" title="function not covered" >) </span>{
+    this.edi<span class="cstat-no" title="statement not covered" >tPlaylistService.add(this.playlistId, this.allMusics.filter(item</span> =&gt; item.selected)).subscribe(response =&gt; {
+      this.a<span class="cstat-no" title="statement not covered" >lert.message = 'Músicas adicionadas </span>com sucesso';
+      this.a<span class="cstat-no" title="statement not covered" >lert.class = 'alert-success'</span>;
+      this.alert.display = true;
+      this.musics = [...this.musics, ...this.allMusics.filter(item =&gt; item.selected).map(item =&gt; {
+        return  {musica: item};<span class="fstat-no" title="function not covered" ></span>
+      })<span class="cstat-no" title="statement not covered" >];</span>
+    }, error =&gt; {
+      this.alert.message = 'Não foi possível adicionar as músicas.';
+      this.alert.class = 'alert-danger';
+      this.alert.display = true;
+    });
+  }
+&nbsp;
+  limparBusca() {
+    this.router.navigate(['/edit-playlist']);
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 24 2018 10:37:38 GMT-0300 (E. South America Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>
