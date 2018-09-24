@@ -16,13 +16,14 @@ export class EditPlaylistComponent implements OnInit {
   criteria: any;
   playlistId: any;
   allMusics: any;
-  allSelected: boolean;
+  allSelected: boolean = false;
   alert = {message: '', class: '', display: false};
 
   constructor(private activatedRoute: ActivatedRoute,
               private userService: UserService,
               private router: Router,
-              private editPlaylistService: EditPlaylistService) { }
+              private editPlaylistService: EditPlaylistService) {
+    }
 
   public musics: any;
 

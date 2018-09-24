@@ -14,11 +14,11 @@
     <div class="col h-100">
       <div class="p-3 card h-100">
         <h5>Todas as músicas: {{criteria}}<span class="float-right"><a *ngIf="criteria" (click)="limparBusca()">Limpar buscar</a></span></h5>
-          <div *ngIf="!allMusics.length">
+          <div *ngIf="!allMusics || !allMusics.length">
             <i>Procure por músicas para adicionar à playist!</i>
           </div>
 
-          <div *ngIf="allMusics.length" class="head-table p-1">
+          <div *ngIf="allMusics && allMusics.length" class="head-table p-1">
             <table class="table">
               <thead>
                 <tr class="row">
@@ -36,7 +36,7 @@
              
             </table>
           </div>
-          <div *ngIf="allMusics.length" class="body-table p-1">
+          <div *ngIf="allMusics &&allMusics.length" class="body-table p-1">
             <table class="table">
                 <tbody>
                   <tr  *ngFor="let music of allMusics" class="row">
@@ -62,10 +62,10 @@
     <div class="col h-100">
         <div class="p-3 card h-100">
           <h5>Músicas da playist:</h5>
-          <div *ngIf="!musics.length">
+          <div *ngIf="!musics || !musics.length">
             <i>Sua playlist não contém nenhuma música ainda!</i>
           </div>
-          <div *ngIf="musics.length" class="head-table p-1">
+          <div *ngIf="musics && musics.length" class="head-table p-1">
             <table class="table">
               <thead>
                 <tr class="row">
@@ -83,7 +83,7 @@
             
             </table>
           </div>
-          <div *ngIf="musics.length" class="body-table p-1">
+          <div *ngIf="musics && musics.length" class="body-table p-1">
             <table class="table">
                 <tbody>
                   <tr  *ngFor="let music of musics" class="row">

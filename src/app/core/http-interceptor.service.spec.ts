@@ -1,15 +1,16 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { HttpInterceptorService } from './http-interceptor.service';
+import { AppHttpInterceptor, HTTPStatus } from './http-interceptor.service';
 
-describe('HttpInterceptorService', () => {
+describe('AppHttpInterceptor', () => {
+  const httpStatusSpy = jasmine.createSpyObj('HTTPStatus', ['setHttpStatus']);
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [HttpInterceptorService]
+      providers: [AppHttpInterceptor, HTTPStatus]
     });
   });
 
-  it('should be created', inject([HttpInterceptorService], (service: HttpInterceptorService) => {
+  it('should be created', inject([AppHttpInterceptor], (service: AppHttpInterceptor) => {
     expect(service).toBeTruthy();
   }));
 });
