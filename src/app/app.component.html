@@ -1,8 +1,10 @@
 <div class="container-fluid h-100 d-flex flex-column">
   <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
-    <a class="navbar-brand" href="#"><i class="fa fa-music"></i>My Music App</a>
-  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" href="#"><i class="fa fa-music"></i> My Music App</a>
+    </div>
+  
+    <div  id="navbarSupportedContent">
       
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" name="searchCriteria" [(ngModel)]="searchCriteria" (keyup.enter)="search($event)" type="search" placeholder="Search musics" aria-label="Search">

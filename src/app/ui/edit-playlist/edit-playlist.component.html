@@ -11,7 +11,7 @@
   </div>
 
   <div class="row h-100">
-    <div class="col h-100">
+    <div class="col-12 col-sm-12 col-md-5 col-lg-5 r-h-100">
       <div class="p-3 card h-100">
         <h5 ><span id="all-musics-title">Todas as músicas: {{criteria}}</span><span class="float-right"><a *ngIf="criteria" (click)="limparBusca()" id="limpar-busca-bt">Limpar buscar</a></span></h5>
           <div *ngIf="!allMusics || !allMusics.length">
@@ -22,13 +22,13 @@
             <table class="table" id="all-musics-table">
               <thead>
                 <tr class="row">
-                  <th class="col-sm-5">
+                  <th class="col-5">
                     Music name
                   </th>
-                  <th class="col-sm-5">
+                  <th class="col-5">
                     Artist
                   </th>
-                  <th class="col-sm-2">
+                  <th class="col-2">
                     <input type="checkbox" class="form-control" id="all-checked" (change)="toggleChecked()" [checked]="allSelected">
                   </th>
                 </tr>
@@ -40,13 +40,13 @@
             <table class="table">
                 <tbody>
                   <tr  *ngFor="let music of allMusics" class="row">
-                    <td class="col-sm-5">
+                    <td class="col-5">
                       {{music.nome}} 
                     </td>
-                    <td class="col-sm-5">
+                    <td class="col-5">
                       {{music.artista.nome}} 
                     </td>
-                    <td class="col-sm-2">
+                    <td class="col-2">
                       <input type="checkbox" class="form-control" (change)="selectMusic(music)" [checked]="music.selected">
                     </td>
                   </tr>
@@ -55,10 +55,10 @@
           </div>
       </div>
     </div>
-    <div class="col col-sm-1 px-1 d-flex flex-column">
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 px-1 d-flex flex-column">
       <button id="add-bt" class="btn btn-default m-3" (click)="addMusic()"><i class="fa fa-angle-double-right"></i></button>
     </div>
-    <div class="col h-100">
+    <div class="col-12 col-sm-12 col-md-5 col-lg-5 r-h-100">
         <div class="p-3 card h-100">
           <h5>Músicas da playist:</h5>
           <div *ngIf="!musics || !musics.length">
@@ -68,13 +68,13 @@
             <table class="table" id="musics-table">
               <thead>
                 <tr class="row">
-                  <th class="col-sm-5">
+                  <th class="col-5">
                     Music name
                   </th>
-                  <th class="col-sm-5">
+                  <th class="col-5">
                     Artist
                   </th>
-                  <th class="col-sm-2">
+                  <th class="col-2">
                     <!-- <input type="checkbox" class="form-control" (change)="toggleChecked()" [checked]="allSelected"> -->
                   </th>
                 </tr>
@@ -86,13 +86,13 @@
             <table class="table">
                 <tbody>
                   <tr  *ngFor="let music of musics; let i = index" class="row">
-                    <td class="col-sm-5">
+                    <td class="col-5">
                       {{music.musica.nome}} 
                     </td>
-                    <td class="col-sm-5">
+                    <td class="col-5">
                       {{music.musica.artista.nome}} 
                     </td>
-                    <td class="col-sm-2">
+                    <td class="col-2">
                         <a (click)="remove(music)" id="remove-bt-{{i}}"><i class="fa fa-trash"></i></a>
                       <!-- <input type="checkbox" class="form-control" (change)="selectMusic(music)" [checked]="music.selected"> -->
                     </td>
